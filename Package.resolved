@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "openai",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MacPaw/OpenAI",
+      "state" : {
+        "revision" : "58de48f0da70ec743727849245c24a22c03f1ee6",
+        "version" : "0.3.8"
+      }
+    }
+  ],
+  "version" : 2
+}
