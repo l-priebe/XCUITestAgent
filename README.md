@@ -55,7 +55,13 @@ However, if you prefer to use a different LLM or model, you can easily integrate
 
 ## Usage
 
-Here's an example of how to create a basic UI test using an XCUITestAgent:
+Add the XCUITestAgent Swift package to the dependencies of your UI test target:
+
+   ```swift
+   .package(url: "https://github.com/l-priebe/XCUITestAgent", from: "1.0.0")
+   ```
+
+Import and use XCUITestAgent in your XCTestCases:
 
   ```swift
   import XCTest
@@ -81,3 +87,4 @@ Here's an example of how to create a basic UI test using an XCUITestAgent:
           )
       }
   }
+  ```
