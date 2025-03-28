@@ -1,7 +1,7 @@
 <img src="https://github.com/user-attachments/assets/14ed66b1-9c8b-42bb-8e16-e00f1ed38f5a" alt="xcuitestrunner_logo" width="160" height="160">
 
 # XCUITestAgent
-AI-Based UI Test Runner for Xcode using LLMs
+Experimental AI-Based UI Test Runner for Xcode using LLMs
 
 ## Run UI Tests Using Natural Language Prompts  
 
