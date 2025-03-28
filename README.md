@@ -9,7 +9,7 @@ XCUITestAgent enables you to execute UI tests by simply describing what needs to
 
 An LLM-based agent intelligently conducts the test by continuously monitoring the app's state (debug information + screen content) and interacting with the UI. It will keep navigating and verifying until it determines whether the test has passed or failed.  
 
-This approach is based on the principles outlined in the following article: [Read more here](https://hundredeni.app).
+This approach is based on the principles outlined in the following article: [Read more here](https://hundredeni.app/2025/03/28/ai-driven-ui-testing-with-multimodal-llms/).
 
 ## Supported Interactions
 
