@@ -1,4 +1,4 @@
-<img src="https://github.com/user-attachments/assets/052f80af-3597-4edf-83dd-8b5176af5ccc" alt="xcuitestrunner_logo" width="160" height="160">
+<img src="https://github.com/user-attachments/assets/14ed66b1-9c8b-42bb-8e16-e00f1ed38f5a" alt="xcuitestrunner_logo" width="160" height="160">
 
 # XCUITestAgent
 AI-Based UI Test Runner for Xcode using LLMs
