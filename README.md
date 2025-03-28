@@ -13,7 +13,7 @@ This approach is based on the principles outlined in the following article: [Rea
 
 ## Supported Interactions
 
-XCUITestAgent, powered by the LLM, supports a wide range of UI interactions to automate your tests effectively. The following interactions are supported:
+XCUITestAgent, powered by LLMs, supports a wide range of UI interactions to automate your tests effectively. The following interactions are supported:
 
 ### 1. **Tapping**  
    The agent can simulate a tap on any UI element, such as buttons, links, or images. The element **does not** need to have an accessibility label or identifier!
