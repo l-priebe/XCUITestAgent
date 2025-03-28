@@ -16,31 +16,31 @@ This approach is based on the principles outlined in the following article: [Rea
 XCUITestAgent, powered by the LLM, supports a wide range of UI interactions to automate your tests effectively. The following interactions are supported:
 
 ### 1. **Tapping**  
-   The LLM can simulate a tap on any UI element, such as buttons, links, or images. The element **does not** need to have an accessibility label or identifier!
+   The agent can simulate a tap on any UI element, such as buttons, links, or images. The element **does not** need to have an accessibility label or identifier!
 
    - **Example Interaction**: "Tap the 'Submit' button"
    - Supported UI elements: Buttons, images, links, etc.
 
 ### 2. **Text Input**  
-   The LLM can input text into text fields, text views, or other editable fields.
+   The agent can input text into text fields, text views, or other editable fields.
 
    - **Example Interaction**: "Enter 'Hello, World!' into the username field"
    - Supported UI elements: Text fields, text views, search bars, etc.
 
 ### 3. **Swipe Gestures**  
-   The LLM supports simulating swipe gestures to navigate through content, such as scrolling, interacting with swipe controls, etc.
+   The agent supports simulating swipe gestures to navigate through content, such as scrolling, interacting with swipe controls, etc.
 
    - **Example Interaction**: "Swipe to confirm the transaction"
    - Supported gestures: Left, right, up, and down swipes.
 
 ### 4. **Waiting**  
-   The LLM can wait for a specified condition to be met before proceeding with the next step. This is particularly useful for waiting for UI elements to appear, animations to finish, or transitions to complete.
+   The agent can wait for a specified condition to be met before proceeding with the next step. This is particularly useful for waiting for UI elements to appear, animations to finish, or transitions to complete.
 
    - **Example Interaction**: "Wait up to 10 seconds for the 'Welcome' label to appear"
    - Supported conditions: Element visibility, text appearance, specific time delays, etc.
 
 ### 5. **Terminating the Test**  
-   The LLM can determine the outcome of the test and automatically terminate it with either a success or failure result. This is based on whether the expected conditions have been met or not.
+   The agent can determine the outcome of the test and automatically terminate it with either a success or failure result. This is based on whether the expected conditions have been met or not.
 
    - **Example Interaction**: "The test is successful if a star is visible on the screen"
    - The agent will fail or complete the test according to the criteria laid out.
