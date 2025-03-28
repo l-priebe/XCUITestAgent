@@ -68,17 +68,20 @@ Import and use XCUITestAgent in your XCTestCases:
   import XCUITestAgent
 
   class ExampleUITests: XCTestCase {
+      private var app: XCUIApplication!
       private var agent: XCUITestAgent!
 
       override func setUp() {
           super.setUp()
+          app = XCUIApplication()
           agent = XCUITestAgent(
-              app: XCUIApplication(),
+              app: app,
               client: OpenAIClient(apiKey: "INSERT API KEY")
           )
       }
 
       func testCanAccessExampleScreen() {
+          app.launch()
           agent.runTest("""
                   1) Select the home tab
                   2) On the home screen, select the example item
