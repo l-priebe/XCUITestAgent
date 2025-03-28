@@ -144,6 +144,9 @@ extension XCUITestAgentPromptProvider {
     }
 }
 
+#if canImport(UIKit)
+import UIKit
+
 extension UIImage {
     fileprivate func scaled(toMaxHeight maxHeight: CGFloat) -> UIImage? {
         let aspectRatio = self.size.width / self.size.height
@@ -167,6 +170,52 @@ extension UIImage {
         return scaledImage
     }
 }
+#endif
+
+#if canImport(AppKit)
+import AppKit
+
+extension NSImage {
+    func scaled(toMaxHeight maxHeight: CGFloat) -> NSImage? {
+        let aspectRatio = self.size.width / self.size.height
+        
+        // If height is already within limits, return the original image
+        if self.size.height <= maxHeight {
+            return self
+        }
+        
+        // Calculate new width while maintaining aspect ratio
+        let newHeight = maxHeight
+        let newWidth = newHeight * aspectRatio
+        let newSize = NSSize(width: newWidth, height: newHeight)
+        
+        // Create a new image representation
+        let newImage = NSImage(size: newSize)
+        newImage.lockFocus()
+        defer { newImage.unlockFocus() }
+        
+        guard let context = NSGraphicsContext.current?.cgContext else { return nil }
+        context.interpolationQuality = .high
+        
+        self.draw(in: NSRect(origin: .zero, size: newSize),
+                  from: NSRect(origin: .zero, size: self.size),
+                  operation: .copy,
+                  fraction: 1.0)
+        
+        return newImage
+    }
+
+    func jpegData(compressionQuality: CGFloat) -> Data? {
+        guard
+            let tiffData = self.tiffRepresentation,
+            let bitmap = NSBitmapImageRep(data: tiffData)
+        else {
+            return nil
+        }
+        return bitmap.representation(using: .jpeg, properties: [.compressionFactor: compressionQuality])
+    }
+}
+#endif
 
 // MARK: - Debug view hierarchy
 
