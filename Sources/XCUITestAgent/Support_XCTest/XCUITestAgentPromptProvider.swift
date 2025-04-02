@@ -139,8 +139,8 @@ extension XCUITestAgentPromptProvider {
 extension XCUITestAgentPromptProvider {
     fileprivate func makeScreenshotData(app: XCUIApplication) -> Data? {
         return app.screenshot().image
-            .scaled(toMaxHeight: 400)?
-            .jpegData(compressionQuality: 0.25)
+            .scaled(toMaxHeight: 768)?
+            .jpegData(compressionQuality: 0.80)
     }
 }
 

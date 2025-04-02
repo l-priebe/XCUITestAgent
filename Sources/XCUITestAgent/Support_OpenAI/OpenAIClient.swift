@@ -60,7 +60,7 @@ public struct OpenAIClient: LLMClient {
                         chatCompletionContentPartImageParam: .init(
                             imageUrl: .init(
                                 url: imageUrl(screenshotData),
-                                detail: .low
+                                detail: .high
                             )
                         )
                     )])
