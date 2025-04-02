@@ -56,6 +56,7 @@ open class UITestAgent {
         case .success, .failure:
             return false
         default:
+            actionHistory.append(nextActionSequence)
             return true
         }
     }
